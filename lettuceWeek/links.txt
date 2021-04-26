@@ -1,0 +1,5 @@
+https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/
+
+https://stackoverflow.com/questions/29313667/how-do-i-remove-the-background-from-this-kind-of-image/41080452
+
+https://github.com/Vinayakkunder/Remove-image-background
