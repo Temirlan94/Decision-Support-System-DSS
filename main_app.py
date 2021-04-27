@@ -818,6 +818,20 @@ class Create_Window:
 
             toplabel = Label(self.labelframe,text="If Not Found contact administrator for data check")
             toplabel.place(x=w / 5, y=h / 60)
+            try:
+                self.picOk = ImageTk.PhotoImage( Image.open("pics/ok.png").resize((int(w / 8), int(h / 4)), Image.ANTIALIAS))
+                self.picWarn = ImageTk.PhotoImage( Image.open("pics/warning.jpg").resize((int(w / 6), int(h / 8)), Image.ANTIALIAS))
+                if ((ePrice and tPrice and lPrice and pPrice and instruction and room1 and room2 and room3 and room4 and room5 and room5 and room6 and room7 and room8 and room9 and room10) == 1):
+                    print ("OK")
+                    toplabel = Label(self.labelframe, image=self.picOk)
+                    toplabel.place(x=w / 5, y=h / 20)
+                else:
+                    toplabel = Label(self.labelframe, image=self.picWarn)
+                    toplabel.place(x=w / 5, y=h / 10)
+                    print("NOT OK")
+            except FileNotFoundError:
+                pass
+
 
         screen_width = self.window.winfo_screenwidth()
         screen_height = self.window.winfo_screenheight()
